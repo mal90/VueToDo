@@ -59,12 +59,12 @@ new Vue({
         else{
           alert("Please add a name to the event!");
         }
-      }
+      },
 
-      deleteEvent: function(index) {
+      deleteEvent: function(x) {
         if(confirm("Are you sure you want to delete this event?")) {
           // $remove is a Vue convenience method similar to splice
-          this.events.$remove(index);
+          this.events.$remove(x);
         }
       }
     }
