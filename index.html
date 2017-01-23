@@ -14,7 +14,7 @@
   <!-- navigation bar -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <a class="navbar-brand"><i class="glyphicon glyphicon-bullhorn"></i> To Do Board</a>
+      <a class="navbar-brand"><i class="glyphicon glyphicon-list-alt"></i> My To-Do list</a>
     </div>
   </nav>
 
@@ -25,16 +25,16 @@
     <div class="col-sm-6">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3>Add an Event</h3>
+          <h3>Add To-Do item</h3>
         </div>
         <div class="panel-body">
 
           <div class="form-group">
-            <input class="form-control" placeholder="Event Name" v-model="event.name">
+            <input class="form-control" placeholder="What i want to do" v-model="event.name">
           </div>
 
           <div class="form-group">
-            <textarea class="form-control" placeholder="Event Description" v-model="event.description"></textarea>
+            <textarea class="form-control" placeholder="Description" v-model="event.description"></textarea>
           </div>
 
           <div class="form-group">
@@ -53,9 +53,10 @@
       <div class="list-group">
         <div class="list-group">
           <a href="#" class="list-group-item" v-for="event in events">
-            <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-bullhorn"></i> {{ event.name }}</h4>
+            <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-list-alt"></i> {{ event.name }}</h4>
             <h5><i class="glyphicon glyphicon-calendar" v-if="event.date"></i> {{ event.date }}</h5>
-            <p class="list-group-item-text" v-if="event.detail">{{ event.detail }}</p>
+            <p class="list-group-item-text" v-if="event.description"><i class="glyphicon glyphicon-info-sign" v-if="event.date"></i>{{ event.description }}</p>
+            <br>
             <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(event)">Delete event</button>
           </a>
         </div>
