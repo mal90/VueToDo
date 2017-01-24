@@ -15,27 +15,27 @@ new Vue({
 
     methods: { //this is where we register methods
         fetchEvents: function() {
-          var events = [
-              {
-                id: 1,
-                name: 'Do shopping',
-                description: 'Buy monthly groceries from Keels',
-                date: '2015-09-10'
-              },
-              {
-                id: 2,
-                name: 'Take the motorcycle to service',
-                description: 'Change new tires',
-                date: '2015-10-02'
-              },
-              {
-                id: 3,
-                name: 'Take out garbage',
-                description: 'And clean the garden',
-                date: '2016-03-11'
-              }
-            ];
-              this.$set('events', events);
+          // var events = [
+          //     {
+          //       id: 1,
+          //       name: 'Do shopping',
+          //       description: 'Buy monthly groceries from Keels',
+          //       date: '2015-09-10'
+          //     },
+          //     {
+          //       id: 2,
+          //       name: 'Take the motorcycle to service',
+          //       description: 'Change new tires',
+          //       date: '2015-10-02'
+          //     },
+          //     {
+          //       id: 3,
+          //       name: 'Take out garbage',
+          //       description: 'And clean the garden',
+          //       date: '2016-03-11'
+          //     }
+          //   ];
+          //     this.$set('events', events);
       },
 
       addEvent: function()
